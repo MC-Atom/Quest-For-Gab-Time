@@ -19,6 +19,14 @@ export function initPathfinding(that) {
           }
         },
 
+         //aStarPathfinding : function (that,obstacleArray,monster,target)
+         AD : function (that,monster) {
+          
+          
+            tmp = this.aStarPathfinding(that,that.currentObstacleCSV,monster,[that.player.x,that.player.y]);
+            console.log(tmp);
+          },
+
         monsterPathfindDefault : function (that,monster) {
             var x = that.player.x - monster.x; //x distance from player
             var y = that.player.y - monster.y; //y distance from player
